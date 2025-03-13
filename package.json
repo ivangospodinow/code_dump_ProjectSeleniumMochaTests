@@ -1,0 +1,31 @@
+{
+  "name": "automation_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "testseq": "ts-mocha tests/**/*.ts --recursive --timeout 200000",
+    "test": "ts-mocha 'tests/**/*.ts' --recursive --timeout 200000 --reporter mocha-multi-reporters --reporter-options configFile=config.js",
+    "test-parallel": "ts-mocha 'tests/**/*.ts' --recursive --parallel --timeout 200000 --reporter mocha-multi-reporters --reporter-options configFile=config.js --debug",
+    "test-dev": "ts-mocha tests/**/*.ts --recursive --timeout 200000",
+    "custom": "ts-mocha --timeout 200000 ./tests/commercial/service_group/crud.ts --reporter mocha-multi-reporters --reporter-options configFile=config.js",
+    "testtest": "ts-mocha --timeout 200000 ./tests/commercial/numbering.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/selenium-webdriver": "^4.0.12",
+    "dotenv": "^9.0.2",
+    "mocha": "^8.4.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "node-fetch": "^2.6.1",
+    "selenium-webdriver": "^4.0.0-beta.3",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.3.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "ts-mocha": "^8.0.0"
+  }
+}
